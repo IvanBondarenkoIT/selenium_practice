@@ -17,16 +17,21 @@ driver = webdriver.Chrome(options=chrome_options)
 
 
 driver.get("https://www.python.org/")
+#
+# search_bar = driver.find_element(By.NAME, value="q")
+# print(search_bar.get_attribute("placeholder"))
+# print(search_bar.tag_name)
+# button = driver.find_element(By.ID, value="submit")
+# print(button.size)
+# documentation_link = driver.find_element(
+#     By.CSS_SELECTOR, value=".documentation-widget a"
+# )
+# print(documentation_link.text)
 
-search_bar = driver.find_element(By.NAME, value="q")
-print(search_bar.get_attribute("placeholder"))
-print(search_bar.tag_name)
-button = driver.find_element(By.ID, value="submit")
-print(button.size)
-documentation_link = driver.find_element(
-    By.CSS_SELECTOR, value=".documentation-widget a"
+bug_link = driver.find_element(
+    By.XPATH, value='//*[@id="site-map"]/div[2]/div/ul/li[3]/a'
 )
-print(documentation_link.text)
+print(bug_link.text)
 
 
 # driver.close()
